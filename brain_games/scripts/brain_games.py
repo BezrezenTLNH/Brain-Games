@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-import cli
+from brain_games import cli
 def main():
 	print("Welcome to the Brain Games!")
 
