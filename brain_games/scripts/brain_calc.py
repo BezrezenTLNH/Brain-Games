@@ -11,24 +11,24 @@ def main():
     correct_answers = 0
     while correct_answers < 3:
         operation_number = randint(1, 3)
-        first_current_random_number = randint(1, 25)
-        second_current_number = randint(1, 25)
-        summ = first_current_random_number + second_current_number
-        multiplication = first_current_random_number * second_current_number
-        subtraction = first_current_random_number - second_current_number
+        first_random_number = randint(1, 25)
+        second_random_number = randint(1, 25)
+        summ = first_random_number + second_random_number
+        multiplication = first_random_number * second_random_number
+        subtraction = first_random_number - second_random_number
 
         if operation_number == 1:
             right_answer = summ
-            print(f'Question: {first_current_random_number} '
-                  f'+ {second_current_number}')
+            print(f'Question: {first_random_number} '
+                  f'+ {second_random_number}')
         elif operation_number == 2:
             right_answer = multiplication
-            print(f'Question: {first_current_random_number} '
-                  f'* {second_current_number}')
+            print(f'Question: {first_random_number} '
+                  f'* {second_random_number}')
         else:
             right_answer = subtraction
-            print(f'Question: {first_current_random_number} '
-                  f'- {second_current_number}')
+            print(f'Question: {first_random_number} '
+                  f'- {second_random_number}')
 
         user_answer = prompt.integer('Your answer: ')
 
