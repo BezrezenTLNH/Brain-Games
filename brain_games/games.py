@@ -8,7 +8,7 @@ def game_prime(user_name):
 
     while correct_answers < 3:
 
-        current_number = randint(1, 25)
+        current_number = randint(1, 2)
         i = 1
         divider = 0
 
@@ -19,7 +19,7 @@ def game_prime(user_name):
             else:
                 i += 1
 
-        if divider <= 2:
+        if (divider <= 2) and (current_number != 1):
             right_answer = 'yes'
         else:
             right_answer = 'no'
@@ -96,8 +96,10 @@ def game_even(user_name):
         else:
             right_answer = 'no'
         print(f'Question: {current_random_number}')
+
         user_answer = prompt.string('Your answer: ')
         user_answer = user_answer.lower()
+
         if user_answer == right_answer:
             print("Correct!")
             correct_answers += 1
