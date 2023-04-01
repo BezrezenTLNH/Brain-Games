@@ -8,7 +8,7 @@ def game_prime(user_name):
 
     while correct_answers < 3:
 
-        current_number = randint(1, 2)
+        current_number = randint(1, 25)
         i = 1
         divider = 0
 
@@ -38,8 +38,7 @@ def game_prime(user_name):
             print(f"Let's try again, {user_name}!")
             break
 
-    if correct_answers == 3:
-        print(f'Congratulations, {user_name}!')
+    print(f'Congratulations, {user_name}!')
 
 
 def game_calc(user_name):
@@ -83,8 +82,7 @@ def game_calc(user_name):
             print(f"Let's try again, {user_name}!")
             break
 
-        if correct_answers == 3:
-            print(f'Congratulations, {user_name}!')
+        print(f'Congratulations, {user_name}!')
 
 
 def game_even(user_name):
@@ -108,8 +106,8 @@ def game_even(user_name):
                   f" Correct answer was '{right_answer}'")
             print(f"Let's try again, {user_name}!")
             break
-        if correct_answers == 3:
-            print(f'Congratulations, {user_name}!')
+
+        print(f'Congratulations, {user_name}!')
 
 
 def game_gcd(user_name):
@@ -148,8 +146,7 @@ def game_gcd(user_name):
             print(f"Let's try again, {user_name}!")
             break
 
-        if correct_answers == 3:
-            print(f'Congratulations, {user_name}!')
+        print(f'Congratulations, {user_name}!')
 
 
 def game_progression(user_name):
@@ -184,5 +181,4 @@ def game_progression(user_name):
             print(f"Let's try again, {user_name}!")
             break
 
-        if correct_answers == 3:
-            print(f'Congratulations, {user_name}!')
+        print(f'Congratulations, {user_name}!')
