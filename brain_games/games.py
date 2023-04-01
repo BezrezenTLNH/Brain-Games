@@ -49,22 +49,28 @@ def game_calc(user_name):
         operation_number = randint(1, 3)
         first_random_number = randint(1, 25)
         second_random_number = randint(1, 25)
-        summ = first_random_number + second_random_number
-        multiplication = first_random_number * second_random_number
-        subtraction = first_random_number - second_random_number
 
         if operation_number == 1:
+            summ = first_random_number + second_random_number
             right_answer = summ
             print(f'Question: {first_random_number} '
                   f'+ {second_random_number}')
         elif operation_number == 2:
+            multiplication = first_random_number * second_random_number
             right_answer = multiplication
             print(f'Question: {first_random_number} '
                   f'* {second_random_number}')
         else:
+            if first_random_number >= second_random_number:
+                biggest_number = first_random_number
+                smallest_number = second_random_number
+            else:
+                biggest_number = second_random_number
+                smallest_number = first_random_number
+            subtraction = biggest_number - smallest_number
             right_answer = subtraction
-            print(f'Question: {first_random_number} '
-                  f'- {second_random_number}')
+            print(f'Question: {biggest_number} '
+                  f'- {smallest_number}')
 
         user_answer = prompt.integer('Your answer: ')
 
@@ -137,6 +143,42 @@ def game_gcd(user_name):
         else:
             print(f"'{user_answer}' is wrong answer ;(."
                   f" Correct answer was '{right_answer}'")
+            print(f"Let's try again, {user_name}!")
+            break
+
+        if correct_answers == 3:
+            print(f'Congratulations, {user_name}!')
+
+
+def game_progression(user_name):
+    correct_answers = 0
+
+    while correct_answers < 3:
+        progression_length = randint(5, 10)
+        progression = [randint(1, 25)]
+        progression_step = randint(2, 10)
+        i = 1
+        question_number_position = randint(0, (progression_length - 1))
+
+        while i < progression_length:
+            next_progression_number = progression[i - 1] + progression_step
+            progression.append(next_progression_number)
+            i += 1
+
+        right_answer = progression[question_number_position]
+        progression[question_number_position] = '..'
+        question = " ".join(map(str, progression))
+
+        print(f'Question: {question}')
+
+        user_answer = prompt.integer('Your answer: ')
+
+        if user_answer == right_answer:
+            print("Correct!")
+            correct_answers += 1
+        else:
+            print(f"'{user_answer}' is wrong answer ;(."
+                  f"Correct answer was '{right_answer}'")
             print(f"Let's try again, {user_name}!")
             break
 

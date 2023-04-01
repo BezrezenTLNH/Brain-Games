@@ -8,7 +8,6 @@ def main():
     user_name = prompt.string('May I have your name? ')
     print(f'Hello, {user_name}!')
     print('What is the result of the expression?')
-
     games.game_calc(user_name)
 
 
