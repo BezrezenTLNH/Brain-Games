@@ -1,14 +1,10 @@
 #!/usr/bin/env python3
-import prompt
-from brain_games import games
+from brain_games.engine import start_games
+from brain_games.games import gcd
 
 
 def main():
-    print('Welcome to the Brain Games!')
-    user_name = prompt.string('May I have your name? ')
-    print(f'Hello, {user_name}!')
-    print('Find the greatest common divisor of given numbers.')
-    games.game_gcd(user_name)
+    start_games(gcd)
 
 
 if __name__ == '__main__':
