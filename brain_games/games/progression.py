@@ -3,7 +3,7 @@ from random import randint
 RULE = 'What number is missing in the progression?'
 
 
-def brain_play():
+def get_question_and_right_answer():
     progression_length = randint(5, 10)
     progression = [randint(1, 25)]
     progression_step = randint(2, 10)

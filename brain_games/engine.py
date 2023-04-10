@@ -11,7 +11,7 @@ def start_games(game):
     correct_answers = 0
 
     while correct_answers < 3:
-        right_answer, example = game.brain_play()
+        right_answer, example = game.get_question_and_right_answer()
         print(f'Question: {example}')
         user_answer = prompt.string('Your answer: ')
 

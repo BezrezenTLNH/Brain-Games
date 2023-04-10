@@ -3,7 +3,7 @@ from random import randint
 RULE = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 
-def brain_play():
+def get_question_and_right_answer():
     example = randint(1, 25)
     i = 1
     divider = 0
