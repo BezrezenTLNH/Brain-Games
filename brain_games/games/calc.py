@@ -9,7 +9,6 @@ def get_question_and_right_answer():
     first_random_number = randint(1, 25)
     second_random_number = randint(1, 25)
     example = f'{first_random_number} {operation_number} {second_random_number}'
-    right_answer = abs(eval(example))
-    right_answer = str(right_answer)
+    right_answer = str(eval(example))
 
     return right_answer, example
