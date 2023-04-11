@@ -6,7 +6,7 @@ RULE = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 def is_prime(question):
     i = 2
     divider = 0
-    while i <= question:
+    while i < question:
         if (question % i) == 0:
             divider += 1
             i += 1
@@ -17,9 +17,9 @@ def is_prime(question):
 
 
 def get_question_and_right_answer():
-    question = randint(1, 25)
+    question = randint(9,9)
 
-    if (is_prime(question) <= 2) and (question != 1):
+    if (is_prime(question) < 2) and (question != 1):
         right_answer = 'yes'
     else:
         right_answer = 'no'
