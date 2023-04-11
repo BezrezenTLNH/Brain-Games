@@ -12,9 +12,11 @@ This is a collection of five mathematically based simple games that are designed
 1. Clone the repository
 
 `git@github.com:BezrezenTLNH/python-project-49.git`
+
 2. Follow to the project directory
 
 `cd python-project-49`
+
 3. Run one of the games
 
 `brain-even`
