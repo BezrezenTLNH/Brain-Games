@@ -17,7 +17,7 @@ def get_question_and_right_answer():
 
     right_answer = progression[question_number_position]
     progression[question_number_position] = '..'
-    example = " ".join(map(str, progression))
+    question = " ".join(map(str, progression))
     right_answer = str(right_answer)
 
-    return right_answer, example
+    return right_answer, question

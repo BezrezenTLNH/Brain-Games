@@ -4,11 +4,8 @@ RULE = 'Answer "yes" if the number is even, otherwise answer "no".'
 
 
 def get_question_and_right_answer():
-    example = randint(1, 100)
+    question = randint(1, 100)
 
-    if (example % 2) == 0:
-        right_answer = 'yes'
-    else:
-        right_answer = 'no'
+    right_answer = 'yes' if question % 2 == 0 else 'no'
 
-    return right_answer, example
+    return right_answer, question
