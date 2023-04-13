@@ -8,16 +8,17 @@ def start_games(game):
 
     print(game.RULE)
 
-    CORRECT_ANSWERS = 0
+    correct_answers = 0
+    GOALS = 3
 
-    while CORRECT_ANSWERS < 3:
+    while correct_answers < GOALS:
         right_answer, question = game.get_question_and_right_answer()
         print(f'Question: {question}')
         user_answer = prompt.string('Your answer: ')
 
         if user_answer == right_answer:
             print("Correct!")
-            CORRECT_ANSWERS += 1
+            correct_answers += 1
         else:
             print(f"'{user_answer}' is wrong answer ;(."
                   f"Correct answer was '{right_answer}'")

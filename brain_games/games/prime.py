@@ -13,15 +13,15 @@ def is_prime(question):
         else:
             i += 1
 
-    return divider
+    if divider < 2:
+        return True
+    else:
+        return False
 
 
 def get_question_and_right_answer():
     question = randint(1, 25)
 
-    if (is_prime(question) < 2) and (question != 1):
-        right_answer = 'yes'
-    else:
-        right_answer = 'no'
+    right_answer = 'yes' if (is_prime(question) and question > 1) else 'no'
 
     return right_answer, question
