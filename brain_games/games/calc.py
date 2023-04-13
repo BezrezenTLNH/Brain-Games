@@ -11,7 +11,7 @@ def get_right_answer(first_number, second_number, operation_number):
     elif operation_number == '-':
         right_answer = operator.sub(first_number, second_number)
     else:
-        right_answer = operator.sub(first_number, second_number)
+        right_answer = operator.mul(first_number, second_number)
     return right_answer
 
 
