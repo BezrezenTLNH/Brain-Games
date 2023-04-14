@@ -22,6 +22,6 @@ def is_prime(question):
 def get_question_and_right_answer():
     question = randint(1, 25)
 
-    right_answer = 'yes' if (is_prime(question) and question > 1) else 'no'
+    right_answer = 'yes' if is_prime(question) and question > 1 else 'no'
 
     return right_answer, question

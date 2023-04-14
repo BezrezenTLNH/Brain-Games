@@ -17,8 +17,9 @@ def get_question_and_right_answer():
     progression = [randint(1, 25)]
     progression_step = randint(2, 10)
     question_number_position = randint(0, (progression_length - 1))
-    current_progression = get_progression(progression_length,
-                                          progression, progression_step)
+    current_progression = get_progression(
+        progression_length, progression, progression_step
+    )
     right_answer = current_progression[question_number_position]
     current_progression[question_number_position] = '..'
     question = " ".join(map(str, current_progression))

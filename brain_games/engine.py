@@ -1,5 +1,7 @@
 import prompt
 
+SCORE_TO_WIN = 3
+
 
 def start_games(game):
     print('Welcome to the Brain Games!')
@@ -9,9 +11,8 @@ def start_games(game):
     print(game.RULE)
 
     correct_answers = 0
-    GOALS = 3
 
-    while correct_answers < GOALS:
+    while correct_answers < SCORE_TO_WIN:
         right_answer, question = game.get_question_and_right_answer()
         print(f'Question: {question}')
         user_answer = prompt.string('Your answer: ')

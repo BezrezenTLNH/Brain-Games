@@ -19,10 +19,12 @@ def get_question_and_right_answer():
     operation_number = random.choice('+-*')
     first_number = randint(1, 25)
     second_number = randint(1, 25)
-    question = f'{first_number} ' \
-               f'{operation_number} {second_number}'
+    question = (
+        f'{first_number} {operation_number} {second_number}'
+    )
 
-    right_answer = get_right_answer(first_number,
-                                    second_number, operation_number)
+    right_answer = get_right_answer(
+        first_number, second_number, operation_number
+    )
 
     return str(right_answer), question
