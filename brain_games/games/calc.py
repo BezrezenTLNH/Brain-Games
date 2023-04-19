@@ -6,12 +6,13 @@ RULE = 'What is the result of the expression?'
 
 
 def get_right_answer(first_number, second_number, operation_number):
-    if operation_number == '+':
-        right_answer = operator.add(first_number, second_number)
-    elif operation_number == '-':
-        right_answer = operator.sub(first_number, second_number)
-    else:
-        right_answer = operator.mul(first_number, second_number)
+    match operation_number:
+        case "+":
+            right_answer = operator.add(first_number, second_number)
+        case "-":
+            right_answer = operator.sub(first_number, second_number)
+        case "*":
+            right_answer = operator.mul(first_number, second_number)
     return right_answer
 
 
